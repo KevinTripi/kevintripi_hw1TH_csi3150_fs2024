@@ -1,0 +1,49 @@
+/* import the google api font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    /* suppress browser defaults and select alt box model */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, Tahoma;
+    /* set variables for colors */
+    --bg-primary: #193a27;
+    --bg-secondary: #a3c4a5;
+    --font-color-primary: rgb(241, 229, 210);
+    --font-color-secondary: #384b40;
+    --backup-color: #de6b48;
+}
+
+/* this styling is desktop first */
+body {
+    height: 100vh;  /*this means span the entire height of screen*/
+    background: var(--bg-primary);
+}
+
+h1 {
+    color:var(--font-color-primary)
+}
+img {
+    border: 6px solid var(--font-color-primary);
+    border-radius: 10px;
+  }
+  .hero{
+    background-color: var(--bg-secondary);
+    color: var(--font-color-secondary);
+    display:flex;
+    text-align: right;
+    padding: 20px;
+  }
+  .hero img {
+    width: 300px;
+    height: auto; /* This ensures the image keeps its aspect ratio */
+    object-fit: cover; /* This helps to maintain the aspect ratio and ensures the image fits within the defined width */
+    max-height: 100%; /* Optional: prevents stretching the image vertically */
+}
+  header{
+    background-color: var(--bg-secondary);
+    h1 {
+        color: var(--font-color-secondary);
+    }
+  }
