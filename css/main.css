@@ -8,11 +8,11 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif, Tahoma;
     /* set variables for colors */
-    --bg-primary: #193a27;
-    --bg-secondary: #a3c4a5;
-    --font-color-primary: rgb(241, 229, 210);
-    --font-color-secondary: #384b40;
-    --backup-color: #de6b48;
+    --bg-primary: #0c1727;
+    --bg-secondary: #c0af95;
+    --font-color-primary: rgb(228, 213, 189);
+    --font-color-secondary: #241606;
+    --backup-color: #57422a; 
 }
 
 /* this styling is desktop first */
@@ -20,30 +20,210 @@ body {
     height: 100vh;  /*this means span the entire height of screen*/
     background: var(--bg-primary);
 }
+h3,h2{
+  color: var(--font-color-secondary);
+}
 
-h1 {
-    color:var(--font-color-primary)
+a:link{
+  color: var(--font-color-secondary);
 }
-img {
-    border: 6px solid var(--font-color-primary);
-    border-radius: 10px;
-  }
-  .hero{
-    background-color: var(--bg-secondary);
-    color: var(--font-color-secondary);
-    display:flex;
-    text-align: right;
-    padding: 20px;
-  }
-  .hero img {
-    width: 300px;
-    height: auto; /* This ensures the image keeps its aspect ratio */
-    object-fit: cover; /* This helps to maintain the aspect ratio and ensures the image fits within the defined width */
-    max-height: 100%; /* Optional: prevents stretching the image vertically */
+a:hover{
+  color: var(--font-color-primary);
 }
-  header{
-    background-color: var(--bg-secondary);
-    h1 {
-        color: var(--font-color-secondary);
-    }
+p{
+  color: var(--font-color-secondary);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header and Navigation styles */
+header {
+  background: var(--bg-primary);
+  color: var(--font-color-primary);
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin-right: 25%;
+  padding: 15px;
+  background-color: var(--bg-primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+/* Logo on the left */
+nav ul li.logo {
+  margin-right: auto;
+}
+
+nav ul li.logo img {
+  height: 40px;
+}
+
+/* Navigation links on the right */
+nav ul li {
+  display: inline-block;
+  margin-left: 15px; /* Reduced margin for compact spacing */
+}
+
+nav ul li a {
+  display: block;
+  color: var(--font-color-primary);
+  text-align: center;
+  padding: 14px 10px; /* Adjust padding for compact spacing */
+  text-decoration: none;
+  transition: background-color 0.3s ease-in;
+}
+
+/* Hover effect - red color */
+nav ul li a:hover {
+  background-color: var(--bg-secondary); /* Changes to red on hover */
+  color: var(--bg-primary); 
+}
+
+
+/* Layout for the hero section */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  background: var(--bg-secondary);
+  margin: 0 auto; /* Center the section horizontally */
+  padding-left: 20%; 
+  padding-right: 20%; /* balance on both sides */
+}
+
+.hero-text,
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero img {
+  max-width: 100%; 
+  height: auto; /* aspect ratio stays same*/
+  object-fit: contain; /* Ensures the image dont stetch*/
+  border-radius: 10px;
+  align-self: center;
+}
+
+.hero h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero blockquote {
+  font-style: italic;
+  color: var(--font-color-secondary)
+ 
+}
+
+.hero p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.hero a{
+  color: var(--font-color-secondary);
+}
+.hero a:hover{
+  color: var(--bg-primary);
+}
+/* Progress section */
+section {
+  padding: 20px;
+  background-color: var(--bg-secondary);
+}
+
+meter {
+
+  width: 100%;
+  height: 20px;
+}
+
+
+.funfacts{
+  display: flex;
+  align-items: center;
+}
+
+.resume-sections{
+  padding: 25px 10% 10px;
+
+}
+
+
+.fun-facts {
+  display: flex;
+  justify-content: space-between; /*items with equal space */
+  gap: 20px; /* Adds space betweens */
+}
+.fun-section p{
+  padding-top: 10px;
+}
+.fun-section {
+  flex: 1; /* Each section takes up equal space */
+  padding: 25px;
+  border-radius: 10px;
+}
+#fav-book a{
+  color: var(--font-color-secondary);
+}
+#fav-book a:hover{
+  color: var(--font-color-primary);
+}
+/* Footer section */
+footer {
+  background-color: var(--bg-primary);
+  color: var(--bg-secondary);
+  text-align: center;
+  padding: 10px;
+
+  width: 100%;
+  bottom: 0;
+}
+footer p{
+  color: var(--font-color-primary);
+}
+footer a {
+  color: var(--font-color-primary);
+  text-decoration: none;
+}
+footer a:link{
+  color: var(--font-color-primary);
+}
+footer a:hover {
+  text-decoration: underline;
+  color: var(--bg-secondary);
+  transition: 0.3s;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero {
+      grid-template-columns: 1fr;
   }
+
+  nav ul {
+      text-align: center;
+  }
+
+  nav ul li {
+      float: none;
+  }
+
+  footer {
+      position: relative;
+  }
+}
