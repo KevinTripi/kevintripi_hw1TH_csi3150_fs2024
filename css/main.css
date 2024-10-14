@@ -24,12 +24,7 @@ h3,h2{
   color: var(--font-color-secondary);
 }
 
-a:link{
-  color: var(--font-color-secondary);
-}
-a:hover{
-  color: var(--font-color-primary);
-}
+
 p{
   color: var(--font-color-secondary);
 }
