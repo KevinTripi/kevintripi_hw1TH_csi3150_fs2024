@@ -172,10 +172,10 @@ meter {
   padding: 25px;
   border-radius: 10px;
 }
-#fav-book a{
+#link-p a{
   color: var(--font-color-secondary);
 }
-#fav-book a:hover{
+#link-p a:hover{
   color: var(--font-color-primary);
 }
 /* Footer section */
